@@ -106,11 +106,24 @@
       <div class="row mt-4">
         <div class="col-lg-12">
           <h3>Outros Tipos de Acidentes</h3>
-          <ul>
-            {% for acidente in outros_acidentes %}
-            <li>{{ acidente.tipo }}: {{ acidente.quantidade }}</li>
-            {% endfor %}
-          </ul>
+
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Tipo</th>
+                <th scope="col">Total de Acidentes</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              {% for acidente in outros_acidentes %}
+              <tr>
+                <td>{{ acidente.tipo }}</td>
+                <td>{{ acidente.quantidade }}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
