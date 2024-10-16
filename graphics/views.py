@@ -58,10 +58,11 @@ def grafico_acidentes(request):
     title_ano_estado = f'Total de Acidentes por Estado ({start_date_ano.strftime("%d/%m/%Y")} até {end_date_ano.strftime("%d/%m/%Y")})' if start_date_ano and end_date_ano else 'Total de Acidentes por Estado (2007 até 2020)'
     # Gráfico de acidentes por estado
     acidentes_por_estado = df_estado['uf'].value_counts()
+
     fig2 = px.bar(
         acidentes_por_estado, x=acidentes_por_estado.index,
         y=acidentes_por_estado.values, title=title_ano_estado,
-        labels={'uf': 'Estado (UF)', 'acidentes_por_estado': 'QTDE'}
+        labels={'uf': 'Estadooo (UF)', 'y': 'Quantidade'}
     )
     
     # Gráfico de Tipos de Acidentes
